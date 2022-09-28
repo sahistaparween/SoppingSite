@@ -1,0 +1,20 @@
+body {
+   
+background-image: linear-gradient(to right,#e1d3e7,#b5a379);
+margin-top: 150px !important;
+
+
+text-align: center;
+color: rgb(7, 65, 65);
+padding: 30px;
+
+
+
+margin-top: 60px;
+margin-bottom: 18px;
+width: 80px;
+animation: mover 1s infinite alternate;
+    
+    
+}
+

@@ -1,0 +1,28 @@
+body {
+
+
+text-align: center;
+color: rgb(7, 65, 65);
+padding: 30px;
+background-color: rgb(212, 172, 201);
+
+
+margin-top: 60px;
+margin-bottom: 18px;
+width: 80px;
+animation: mover 1s infinite alternate;
+}
+.row{
+    float:left;
+    text-align: center;
+   
+    padding: 10px;
+    font-family:helvetica-medium;
+
+
+}
+
+
+
+
+

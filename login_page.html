@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+
+    
+
+    <title> Login Form</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+
+    <script src="../js/login_validate.js"></script>
+
+    <style>
+
+    .navbar_nav {
+
+    height: 50px;
+
+    
+
+    position: absolute;
+
+    z-index: 3;
+
+    }
+
+    .navbar_nav,
+
+    .menu_a { width: 100%; }
+
+    .menu_li,
+
+    .menu_a { display: inline-block; }
+
+    .menu_li {
+
+    width: 25%;
+
+    float: left;
+
+    opacity: 0.8;
+
+    text-align: center;
+
+    height: 50px;
+
+    }
+
+    .menu_a { padding: 16px 0; }
+
+    .menu_li:hover,
+
+    .menu_a:hover {
+
+    background-color: #f26d6f;
+
+    opacity: 1;
+
+    }
+
+    #menu-acces {
+
+    display: none;
+
+    width: 100%;
+
+    position: relative;
+
+    text-align: center;
+
+    }
+
+    .menu_open:after {
+
+    content: "";
+
+    display: table;
+
+    }
+
+    @media only screen and (max-width: 480px) {
+
+    #menu-acces { display: block; }
+
+    .navbar_ul { display: none; }
+
+    .menu_li {
+
+    width: 100%;
+
+    position: relative;
+
+    opacity: 1;
+
+    }
+
+    .menu_open { height: auto; }
+
+    }
+
+    h2,h4{
+
+    color:#91060f;
+
+    font-family:Arial Black;
+
+    }
+
+    a{
+
+    color:#0a0a0a;
+
+    font-family:Arial Black;
+
+    }
+
+    p{
+
+    font-family:Aharoni;
+
+    }
+
+    h5{
+
+    font-family:Calibri;
+
+    font-size:20px;
+
+    color: #990000
+
+    ;
+
+    }
+
+    hr.new1 {
+
+    border-top: 1px solid red;
+
+    }
+
+    $(document).ready(function(){
+
+    responsive_menu = $('.navbar_ul');
+
+    $('#menu-acces').on('click', function(e) {
+
+    e.preventDefault();
+
+    responsive_menu.slideToggle();
+
+    });
+
+    $(window).resize(function(){
+
+    var obtener_ancho = $(this).width();
+
+    if(obtener_ancho > 480 && responsive_menu.is(':hidden')) {
+
+    responsive_menu.removeAttr('style');
+
+    }
+
+    });
+
+    $('nav li').on('click', function(e) {
+
+    var obtener_ancho = $(window).width();
+
+    if(obtener_ancho < 480 ) {
+
+    responsive_menu.slideToggle();
+
+    }
+
+    });
+
+    });
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="menu_open navbar_nav">
+
+    <a href="#" id="menu-acces" class="menu_a">OPEN THE MENU</a>
+
+    <ul class="menu_open navbar_ul">
+
+    <li class="menu_li">
+
+    <a class="menu_a" href="index.html">HOME</a>
+
+    </li>
+
+    <li class="menu_li">
+
+    <a class="menu_a" href="registration.html">Register</a>
+
+    </li>
+
+    <li class="menu_li">
+
+    <a class="menu_a" href="login.html">Login</a>
+
+    </li>
+
+    <!--li class="menu_li">
+
+    <a class="menu_a" href="#">CONTACT</a>
+
+    </li-->
+
+    </ul>
+
+    </nav>
+
+    <br><br><br><br>
+
+    <form id="first_form" method="post" action="welcome.html" >
+
+    <h2>Login Form</h2>
+
+    <div>
+
+    <label for="email">Email:</label>
+
+    <input type="email" id="email" name="email"></input>
+
+    </div>
+
+    <div>
+
+    <label for="password">Password:</label>
+
+    <input type="password" id="password" name="password"></input>
+
+    </div>
+
+    <div>
+
+    <input type="submit" value="Submit" action="welcome.html"/>
+
+    </div>
+
+    </form>
+
+</body>
+
+</html>

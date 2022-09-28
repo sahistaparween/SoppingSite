@@ -1,0 +1,50 @@
+<style>
+
+    .main{
+        padding: 10px;
+	background-color: rgb(0, 0, 0);
+}
+.Heading{
+text-align: center;
+}
+
+.headsec{
+    background-color:#f1f1f1;
+    padding: 50px;
+}
+.title{
+	text-align: center;
+font-weight: lighter;
+font-size: small;
+}
+    .container { 
+        padding: 25px; 
+        background-color: lightblue;
+    } 
+
+     form { 
+        border: 3px solid #f1f1f1; 
+    } 
+    .Head{
+   display:  inline;
+   list-style-type: none;
+   padding: 12px;
+   color: rgb(96, 148, 163);
+   font-size: 18px;
+}
+
+.boxes {
+float: left;  width: 200px;
+  height: 200px;
+  border: 1px solid green;
+  padding: 50px;
+  margin: 20px;
+  text-align: center;
+}
+.wrapper{
+    text-align: center;
+}
+.texts{
+    padding-top: 80px;
+}
+</style>

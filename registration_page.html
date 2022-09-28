@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+    <title> Register</title>
+    <script src="../js/validate.js"></script>
+    <link rel="stylesheet" href="../css/registration.css"/>
+
+    <style>
+
+    .navbar_nav {
+
+    height: 30px;
+
+   
+
+    position:absolute;
+
+    z-index: 3;
+
+    }
+
+    .navbar_nav,
+
+    .menu_a { width: 100%; }
+
+    .menu_li,
+
+    .menu_a { display: inline-block; }
+
+    .menu_li {
+
+    width: 25%;
+
+    float: left;
+
+    opacity: 0.8;
+
+    text-align: center;
+
+    height: 50px;
+
+    }
+
+    .menu_a { padding: 16px 0; }
+
+    .menu_li:hover,
+
+    .menu_a:hover {
+
+    background-color: #f26d6f;
+
+    opacity: 1;
+
+    }
+
+    #menu-acces {
+
+    display: none;
+
+    width: 100%;
+
+    position: relative;
+
+    text-align: center;
+
+    }
+
+    .menu_open:after {
+
+    content: "";
+
+    display: table;
+
+    }
+
+    @media only screen and (max-width: 480px) {
+
+    #menu-acces { display: block; }
+
+    .navbar_ul { display: none; }
+
+    .menu_li {
+
+    width: 100%;
+
+    position: relative;
+
+    opacity: 1;
+
+    }
+
+    .menu_open { height: auto; }
+
+    }
+
+    h2,h4{
+
+    color:#91060f;
+
+    font-family:Arial Black;
+
+    }
+
+    a{
+
+    color:#0a0a0a;
+
+    font-family:Arial Black;
+
+    }
+
+    p{
+
+    font-family:Aharoni;
+
+    }
+
+    h5{
+
+    font-family:Calibri;
+
+    font-size:20px;
+
+    color: #990000
+
+    ;
+
+    }
+
+    hr.new1 {
+
+    border-top: 1px solid red;
+
+    }
+
+    $(document).ready(function(){
+
+    responsive_menu = $('.navbar_ul');
+
+    $('#menu-acces').on('click', function(e) {
+
+    e.preventDefault();
+
+    responsive_menu.slideToggle();
+
+    });
+
+    $(window).resize(function(){
+
+    var obtener_ancho = $(this).width();
+
+    if(obtener_ancho > 480 && responsive_menu.is(':hidden')) {
+
+    responsive_menu.removeAttr('style');
+
+    }
+
+    });
+
+    $('nav li').on('click', function(e) {
+
+    var obtener_ancho = $(window).width();
+
+    if(obtener_ancho < 480 ) {
+
+    responsive_menu.slideToggle();
+
+    }
+
+    });
+
+    });
+
+    </style>
+    <div>
+    <nav class="menu_open navbar_nav">
+
+        <a href="#" id="menu-acces" class="menu_a">OPEN THE MENU</a>
+    
+        <ul class="menu_open navbar_ul">
+    
+        <li class="menu_li">
+    
+        <a class="menu_a" href="../html/index.html">HOME</a>
+    
+        </li>
+    
+        <li class="menu_li">
+    
+        <a class="menu_a" href="../html/registration_page.html">Register</a>
+    
+        </li>
+    
+        <li class="menu_li">
+    
+        <a class="menu_a" href="../html/login_page.html">Login</a>
+    
+        </li>
+    
+        </ul>
+    
+        </nav>
+        </head>
+
+
+
+    <body>
+
+    <br><br><br><br>
+
+    <form name="contactForm" onsubmit="return validateForm()" method="post">
+
+    <h2>Register Form</h2>
+
+    <div class="row">
+
+    <label>Full Name</label>
+
+    <input type="text" name="name">
+
+    <div class="error" id="nameErr"></div>
+
+    </div>
+
+    <div class="row">
+
+    <label>Email Address</label>
+
+    <input type="text" name="email">
+
+    <div class="error" id="emailErr"></div>
+
+    </div>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+    <label for="psw-Confirmt"><b>Confirm Password</b></label>
+    <input type="password" placeholder="Confirm Password" name="psw-Confirm" id="psw-Confirm" required>
+
+    <label for="psw-Mobile"><b>Mobile no.</b></label>
+    <input type="tel" placeholder="Mobile Number" name="psw-Mobile" id="psw-Mobile" required>
+    <hr>
+
+    <button type="submit" class="registerbtn">Login</button>
+  </div>
+
+    <p>Already have an account? <a href="#">Login</a>.</p>
+
+
+    <div class="row">
+
+    
+
+    <div class="error" id="countryErr"></div>
+
+    <!--/div-->
+
+    <div class="row">
+
+    <label>Gender</label>
+
+    <div class="form-inline">
+
+    <label><input type="radio" name="gender" value="male"> Male</label>
+
+    <label><input type="radio" name="gender" value="female"> Female</label>
+
+    </div>
+
+    <div class="error" id="genderErr"></div>
+
+    </div>
+
+    <!--/div-->
+
+    <div class="row">
+
+    <input type="submit" value="Submit">
+
+    </div>
+
+    </form>
+
+</body>
+
+</html>
+
+
+
